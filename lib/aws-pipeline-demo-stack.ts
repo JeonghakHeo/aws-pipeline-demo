@@ -6,7 +6,7 @@ export class AwsPipelineDemoStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    const pipeline = new CodePipeline(this, 'Pipeline', {
+    new CodePipeline(this, 'Pipeline', {
       pipelineName: 'TestPipeline',
       synth: new ShellStep('Synth', {
         input: CodePipelineSource.gitHub('JeonghakHeo/aws-pipeline-demo', 'main'),
