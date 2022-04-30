@@ -13,7 +13,7 @@ export class AwsPipelineDemoStack extends Stack {
         commands: [
           'npm ci',
           'npm run build',
-          'npm run synth'
+          'npx cdk synth'
         ]
       }) 
     })
